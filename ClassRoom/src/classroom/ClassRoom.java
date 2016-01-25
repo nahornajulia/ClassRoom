@@ -1,21 +1,28 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+  /*
+    1. Think about how it can be done. 
+    + 2. Create ClassRoom Class
+    + 3. Create Desk class. Classroom Should contain desks
+      3.1     
++ 4. Create Pupil class. Desk should contain pupils. Pupil should have a name
+    + 5. Create pretty printing of Desk
+    -------------------------
+    |                       |
+    |                       |
+    -------------------------
+    /pupil1/       /empty/
+    
+    
+    */
 package classroom;
 
-/**
+import java.util.List;
+
+/*
  *
  * @author ynahorna
  */
 public class ClassRoom {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+    List<Desk> deskLayout;
     
 }
