@@ -6,56 +6,63 @@ import java.util.Objects;
  *
  * @author ynahorna
  */
-public class Pupil implements Comparable<Pupil>{
-    
+public class Pupil implements Comparable<Pupil> {
+
     private String name;
     private Boolean isAgirl;
     private float averageMark;
- 
-    public Pupil(String name, Boolean isAgirl, float averageMark){
+
+    public Pupil(String name, Boolean isAgirl, float averageMark) {
         this.name = name;
         this.isAgirl = isAgirl;
         this.averageMark = averageMark;
     }
-    
-    public Pupil(String name, float averageMark){
+
+    public Pupil(String name, float averageMark) {
         this.name = name;
         this.averageMark = averageMark;
     }
-    
-       
-    public String getName(){
+
+    @Override
+    public String toString() {
+        String gender = " - ";
+        if (isAgirl == true) {
+            gender = gender + "girl.";
+        } else {
+            gender = gender + "boy.";
+        }
+        return String.format("Pupil's name: " + name + gender + " Average mark: " + averageMark);
+    }
+
+    public String getName() {
         return name;
     }
-  
-    public void setName(String name){
+
+    public void setName(String name) {
         this.name = name;
     }
-    
-    public Boolean getGender(){
+
+    public Boolean getGender() {
         return isAgirl;
     }
-    
-    public void setGender(Boolean isAgirl){
+
+    public void setGender(Boolean isAgirl) {
         this.isAgirl = isAgirl;
     }
-    
-    public float getAverageMark(){
+
+    public float getAverageMark() {
         return averageMark;
     }
-    
-    public void setAverageMark(float averageMark){
-        this.averageMark = averageMark;
-    }   
 
-    
-    
+    public void setAverageMark(float averageMark) {
+        this.averageMark = averageMark;
+    }
+
     @Override
     public int compareTo(Pupil o) {
         return name.compareTo(o.getName());
     }
-    
-    
+
     @Override
     public int hashCode() {
         int hash = 37;
